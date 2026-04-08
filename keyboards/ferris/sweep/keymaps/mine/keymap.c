@@ -3,21 +3,24 @@
 
 #include QMK_KEYBOARD_H
 
-#define KC_CTSC RCTL_T(KC_SCLN)
-#define KC_CTLA LCTL_T(KC_A)
-#define KC_LSHZ LSFT_T(KC_Z)
-#define KC_RLSH RSFT_T(KC_SLSH)
-#define KC_SPM2 LT(2, KC_SPC)
-#define KC_BSM1 LT(1, KC_BSPC)
-#define KC_GUTA GUI_T(KC_TAB)
-#define KC_CLGV CTL_T(KC_GRV)
+// Left-hand home row mods
+#define ALT_A LALT_T(KC_A)
+#define GUI_R LGUI_T(KC_R)
+#define CTL_S LCTL_T(KC_S)
+#define SHFT_T LSFT_T(KC_T)
+
+// Right-hand home row mods
+#define SFT_N RSFT_T(KC_N)
+#define CTL_E RCTL_T(KC_E)
+#define GUI_I RGUI_T(KC_I)
+#define ALT_O LALT_T(KC_O)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
-    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,  KC_I,    KC_O,   KC_P,
-    KC_CTLA, KC_S,    KC_D,    KC_F,    KC_G,            KC_H,    KC_J,  KC_K,    KC_L,   KC_SCLN,
-    KC_LSHZ, KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M,  KC_COMM, KC_DOT, KC_RLSH,
-                                    KC_CLGV, KC_BSM1, KC_SPM2, KC_GUTA
+    KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,            KC_J,    KC_L,  KC_U,    KC_Y,   KC_QUOT,
+    ALT_A,   GUI_R,   CTL_S,   SHFT_T,  KC_D,            KC_H,    SFT_N, CTL_E,   GUI_I,  ALT_O,
+    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_K,    KC_M,  KC_COMM, KC_DOT, KC_SLSH,
+                                    KC_ENT, KC_BSPC, KC_SPC, KC_LSFT
   ),
 
   [1] = LAYOUT(
