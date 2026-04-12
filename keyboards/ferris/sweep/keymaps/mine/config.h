@@ -11,13 +11,21 @@
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1, 0, 2, 4 }
 
 // Enable Chordal Hold (the "opposite hand" rule)
+#ifndef CHORDAL_HOLD
 #define CHORDAL_HOLD
+#endif
 
 // Enable Flow Tap to disable modifiers during fast typing bursts
+#ifndef FLOW_TAP_TERM
 #define FLOW_TAP_TERM 150
+#endif
 
 // Set a safe, lazy Tapping Term for deliberate modifier use
+#ifndef TAPPING_TERM
 #define TAPPING_TERM 250
+#endif
 
 // Prevent accidental modifier repeats on fast "tap then hold"
+#ifndef QUICK_TAP_TERM
 #define QUICK_TAP_TERM 120
+#endif

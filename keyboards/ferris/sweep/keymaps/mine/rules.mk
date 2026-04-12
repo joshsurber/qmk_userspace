@@ -1,11 +1,15 @@
-VIA_ENABLE = yes
+VIA_ENABLE = no
 VIAL_ENABLE = yes
+TAP_DANCE_ENABLE = no
+COMBO_ENABLE = no
+VIAL_COMBO_ENABLE = no
+KEY_OVERRIDE_ENABLE = no
 LTO_ENABLE = yes
 QMK_SETTINGS = no
 
 CAPS_WORD_ENABLE = yes
 LAYER_LOCK_ENABLE = no
-REPEAT_KEY_ENABLE = yes
+REPEAT_KEY_ENABLE = no
 
 CONSOLE_ENABLE = no       # Disables debug printing
 SPACE_CADET_ENABLE = no   # Disables special bracket/parenthesis behavior on mods
